@@ -239,6 +239,8 @@ periodics:
       - --scenario=kubernetes_e2e
       - --
       - --cluster=gce-scale-cluster
+      # Revert this after experiment with k/k issue#68613.
+      - --env=CLUSTER_DNS_CORE_DNS=true
       - --env=ENABLE_APISERVER_ADVANCED_AUDIT=false
       - --env=HEAPSTER_MACHINE_TYPE=n1-standard-16
       - --env=MASTER_MIN_CPU_ARCHITECTURE=Intel Broadwell
